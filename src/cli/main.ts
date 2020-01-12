@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 
-import { BlyncStatic } from '../lib/BlyncStatic';
 import { options } from './cubeConfig';
 import { CubeOptions } from './CubeOptions';
 import { showMenu } from './showMenu';
@@ -8,6 +7,7 @@ import { tryProcessSolidColor } from '../util/solidColors';
 import { FixedDelayPatternProcessor } from '../engine/FixedDelayPatternProcessor';
 import { SolidColor } from '../patterns/Solid/SolidColor';
 import { Color } from '../patterns/Color';
+import { Kasa } from '../lib/Kasa';
 
 const [, , patt] = process.argv;
 if (!patt) {
@@ -29,6 +29,6 @@ const pattern: CubeOptions = options.has(patt)
     };
 
 (async function run() {
-  const blync = BlyncStatic.getDevice(0);
+  const blync = new Kasa();
   await pattern.engine.process(pattern.pattern, blync);
 })();

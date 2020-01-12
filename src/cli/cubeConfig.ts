@@ -1,4 +1,11 @@
-import { MoodRing, Police, Party, Deadmau5, Halloween } from '../patterns';
+import {
+  MoodRing,
+  Police,
+  Party,
+  Deadmau5,
+  Halloween,
+  Strobe
+} from '../patterns';
 import { FunctionPatternProcessor } from '../engine/FunctionPatternProcessor';
 import { FixedDelayPatternProcessor } from '../engine/FixedDelayPatternProcessor';
 import { CubeOptions } from './CubeOptions';
@@ -47,6 +54,15 @@ export const options: Map<string, CubeOptions> = new Map([
       engine: new FixedDelayPatternProcessor(),
       name: 'halloween',
       description: "Let's get spoopy 🎃"
+    }
+  ],
+  [
+    'strobe',
+    {
+      pattern: new Strobe(),
+      engine: new FixedDelayPatternProcessor(),
+      name: 'strobe',
+      description: "It's strobe"
     }
   ]
 ]);
