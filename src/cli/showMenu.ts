@@ -5,20 +5,20 @@ const optionText = [...options.entries()]
 
 export function showMenu() {
   console.log(`
-    blync-party
+    kasa-party
         Run a light pattern or just change the color of your Blync light.
         Use a built-in pattern, color name, or hex code!
 
     Usage
-        blync-party [option]
-        blync-party [hex code]
-        blync-party [color name]
+        kasa-party [option]
+        kasa-party [hex code]
+        kasa-party [color name]
 
     Examples
-        blync-party party
-        blync-party cyan
-        blync-party #FF0000
-        blync-party 00FF00
+        kasa-party party
+        kasa-party cyan
+        kasa-party #FF0000
+        kasa-party 00FF00
 
     Options
 ${optionText}
